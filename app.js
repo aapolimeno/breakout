@@ -1,5 +1,5 @@
 
-import { Scene } from "./scenes/scene.js"; 
+import { Scene1 } from "./scenes/scene1.js"; 
 // import { Button } from "objects/button.js";
 
 
@@ -7,17 +7,17 @@ import { Scene } from "./scenes/scene.js";
 const canvas = document.getElementById("breakoutCanvas"); 
 const ctx = canvas.getContext("2d")
 
-const scene = new Scene(ctx); 
+const scene1 = new Scene1(ctx); 
 
 canvas.addEventListener("click", (event) => {
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     
-    scene.handleClick(x, y);
+    scene1.handleClick(x, y);
 })
 
-scene.draw();
+scene1.draw();
 
 
 

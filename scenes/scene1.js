@@ -1,6 +1,7 @@
 import { Button } from '../objects/button.js';
 
-export class Scene {
+
+export class Scene1 {
     constructor(ctx) {
         this.ctx = ctx;
         this.buttons = [
@@ -10,7 +11,7 @@ export class Scene {
     }
 
     draw() {
-        // this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height)
+        this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height)
 
         // Draw the game name text
         this.drawText();
@@ -46,9 +47,18 @@ export class Scene {
     handleClick(x, y) {
         this.buttons.forEach(button => {
             if (button.isClicked(x, y)) {
-                console.log(`${button.label} button was clicked!`);
-                // 
+                if (button.label === "Daytime") {
+                    this.ctx.fillStyle = "#ABDBFF";
+                    this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+                }
+                
+                if (button.label === "Nighttime") {
+                    this.ctx.fillStyle = "#001525";
+                    this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+                }
+                
             }
         });
     }
 }
+
