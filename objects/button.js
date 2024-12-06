@@ -13,11 +13,15 @@ export class Button {
         // Draw the button background 
         ctx.fillStyle = this.fillColor;
         ctx.fillRect(this.x, this.y, this.width, this.height);
+
+        // Draw the button border 
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(this.x, this.y, this.width, this.height);
         
         // Set text styles
         ctx.fillStyle = this.textColor;
-        
-        ctx.font = "24px serif"; // Adjust font size if needed
+        ctx.font = "35px 'Orbitron', sans-serif"; 
         ctx.textAlign = "center"; // Center text horizontally
         ctx.textBaseline = "middle"; // Center text vertically
 
