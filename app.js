@@ -1,7 +1,5 @@
 
 import { Scene1 } from "./scenes/scene1.js"; 
-// import { Button } from "objects/button.js";
-
 
 // Get the canvas element and its context 
 const canvas = document.getElementById("breakoutCanvas"); 
